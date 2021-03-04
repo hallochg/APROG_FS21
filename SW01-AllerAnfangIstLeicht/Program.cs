@@ -32,6 +32,7 @@ namespace SW01_AllerAnfangIstLeicht
             {
                 Console.WriteLine($"{i} {myList.IndexOf(i)}");
             }
+
         }
 
         static void PrintStr(string p_string)
