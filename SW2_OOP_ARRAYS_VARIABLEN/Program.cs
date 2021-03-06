@@ -6,15 +6,27 @@ namespace SW2_OOP_ARRAYS_VARIABLEN
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
-            //UebungArrays ueb1 = new UebungArrays();
-            //ueb1.process();
-            //UebungVokale ueb_voc = new UebungVokale();
-            //ueb_voc.process();
+            TestGarbage();
+            GC.Collect();
+            Console.WriteLine($"Memory used after return to main: {GC.GetTotalMemory(false)}");
+        }
+
+        public static void TestGarbage() {
             GarbageCollector garbage = new GarbageCollector();
             garbage.process();
             GC.Collect();
             Console.WriteLine($"Memory used after return: {GC.GetTotalMemory(false)}");
+            garbage = null;
+        }
+
+        public static void TestArray() {
+            UebungArrays ueb1 = new UebungArrays();
+            ueb1.process();
+        }
+
+        public static void TestVocal() {
+            UebungVokale ueb_voc = new UebungVokale();
+            ueb_voc.process();
         }
     }
 }
