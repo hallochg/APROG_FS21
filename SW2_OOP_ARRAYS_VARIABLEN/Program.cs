@@ -13,7 +13,8 @@ namespace SW2_OOP_ARRAYS_VARIABLEN
             //ueb_voc.process();
             GarbageCollector garbage = new GarbageCollector();
             garbage.process();
-
+            GC.Collect();
+            Console.WriteLine($"Memory used after return: {GC.GetTotalMemory(false)}");
         }
     }
 }
