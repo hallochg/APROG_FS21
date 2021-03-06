@@ -31,7 +31,11 @@ namespace SW02_Person {
         }
 
 
-        public Person(string plastname, string pfirstname, int p_age, Gender pgender) {
+        public Person(string plastname, string pfirstname, int p_age, Gender pgender)
+            :this(plastname, pfirstname, pgender) {
+            mage = p_age;
+        }
+        public Person(string plastname, string pfirstname, Gender pgender) {
             if (String.IsNullOrEmpty(plastname)) {
                 mlastname = "xxx";
             } else {
@@ -42,9 +46,35 @@ namespace SW02_Person {
             } else {
                 mfirstname = pfirstname;
             }
-            mage = p_age;
+            mage = -1;
             mgender = pgender;
+
+        }
+        public void Print() {
+            Print(true);
         }
 
+        public void Print(bool pshowtitle) {
+                if ((mage > 15)&&(pshowtitle == true)) {
+                    string title;
+                    switch (gender) {
+                        case Gender.Male:
+                            title = "Herr";
+                            break;
+
+                        case Gender.Female:
+                            title = "Frau";
+                            break;
+                        case Gender.Selfdefined:
+                            title = "";
+                            break;
+                        default:
+                            title = "--";
+                            break;
+                    }
+                    Console.WriteLine(title);
+                }
+                Console.WriteLine($"{firstname} {lastname}");
+        }
     }
 }
