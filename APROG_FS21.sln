@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SW2_OOP_ARRAYS_VARIABLEN", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SW02_Person", "SW02_Person\SW02_Person.csproj", "{E2D9208E-DACF-4569-B293-643802226C1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW04_EnviromentKlasse", "SW04_EnviromentKlasse\SW04_EnviromentKlasse.csproj", "{26F79051-7902-4F3D-A39C-F256D6E728D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SW04_EnviromentKlasse", "SW04_EnviromentKlasse\SW04_EnviromentKlasse.csproj", "{26F79051-7902-4F3D-A39C-F256D6E728D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW04_Exc_List", "SW04_Exc_List\SW04_Exc_List.csproj", "{087F32BE-3F94-401B-BF97-591002146ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\MyListTests\UnitTests.csproj", "{F57AD234-6214-4863-9DC6-6A47F8586087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{26F79051-7902-4F3D-A39C-F256D6E728D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26F79051-7902-4F3D-A39C-F256D6E728D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26F79051-7902-4F3D-A39C-F256D6E728D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{087F32BE-3F94-401B-BF97-591002146ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087F32BE-3F94-401B-BF97-591002146ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087F32BE-3F94-401B-BF97-591002146ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087F32BE-3F94-401B-BF97-591002146ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57AD234-6214-4863-9DC6-6A47F8586087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57AD234-6214-4863-9DC6-6A47F8586087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57AD234-6214-4863-9DC6-6A47F8586087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57AD234-6214-4863-9DC6-6A47F8586087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
