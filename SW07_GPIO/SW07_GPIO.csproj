@@ -11,11 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\APROG_FS21\SW07_utils\SW07_utils.csproj" />
+    <ProjectReference Include="..\SW07_utils\SW07_utils.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd &quot;$(TargetDir)&quot;&#xD;&#xA;&quot;$(SolutionDir)\SecureUpload.exe&quot; . pi-hslu:netcore/$(ProjectName)" />
+    <Exec Command="cd &quot;$(TargetDir)&quot;&#xD;&#xA;&quot;$(SolutionDir)\SecureUpload.exe&quot; . pi-home:netcore/$(ProjectName)" />
   </Target>
 
 </Project>
