@@ -5,18 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SW11_ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="Magenta"/>
-        <Button x:Name="Button_Login" Content="Login" HorizontalAlignment="Left" Margin="221,18,0,0" VerticalAlignment="Top" Height="25" Width="74" Click="Button_Login_Click"/>
-        <TextBox x:Name="textBox_UserName" HorizontalAlignment="Left" Margin="10,47,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Host" HorizontalAlignment="Left" Margin="10,18,0,0" Text="" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="Label_Host" Content="Host" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" Height="26"/>
-        <Label x:Name="Label_User" Content="User" HorizontalAlignment="Left" Margin="146,43,0,0" VerticalAlignment="Top" Height="26"/>
-        <TextBox x:Name="TextBox_Messages" HorizontalAlignment="Left" Margin="337,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="402" Height="269" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
-        <TextBox x:Name="TextBox_Send" HorizontalAlignment="Left" Margin="337,391,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="19" KeyDown="TextBox_Send_KeyDown"/>
-        <Button x:Name="Button_Send" Content="Send" HorizontalAlignment="Left" Margin="672,388,0,0" VerticalAlignment="Top" Height="25" Width="67" Click="Button_Send_Click"/>
-        <TextBox x:Name="TextBox_ChatPartner" HorizontalAlignment="Left" Margin="146,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="Label_chatwith" Content="Currently chatting with " HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Width="136"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="298*"/>
+            <ColumnDefinition Width="475*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="Magenta" Grid.ColumnSpan="3"/>
+        <Button x:Name="Button_Login" Content="Login" HorizontalAlignment="Left" Margin="194,18,0,0" VerticalAlignment="Top" Height="25" Width="74" Click="Button_Login_Click" Grid.Column="1"/>
+        <TextBox x:Name="textBox_UserName" HorizontalAlignment="Left" Margin="10,47,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_Host" HorizontalAlignment="Left" Margin="10,18,0,0" Text="" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label_Host" Content="Host" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1"/>
+        <Label x:Name="Label_User" Content="User" HorizontalAlignment="Left" Margin="119,43,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_Messages" HorizontalAlignment="Left" Margin="264,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="448" Height="269" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_Send" HorizontalAlignment="Left" Margin="264,391,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Height="19" KeyDown="TextBox_Send_KeyDown" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button x:Name="Button_Send" Content="Send" HorizontalAlignment="Left" Margin="347,388,0,0" VerticalAlignment="Top" Height="25" Width="67" Click="Button_Send_Click" Grid.Column="2"/>
+        <ListView x:Name="ListView_Users" Margin="10,102,104,24" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
